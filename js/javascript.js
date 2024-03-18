@@ -8,7 +8,7 @@ $(document).ready(function() {
         
         // get value from input
         let input = document.getElementById("decimal_number").value;
-        
+
         // checks if is in proper numerical format (trust)
         if (input.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e[0-9]+)?$/gm)) {
             
@@ -25,10 +25,12 @@ $(document).ready(function() {
 
     })
 
+    // calculates exponent prime; exponent should be int
     function getExponentPrime (exponent) {
         return exponent + 398;
     }
 
+    // creates combi field; firstNumber in [0,9], Z, and exponentPrime should be number
     function getCombiField (firstNumber, exponentPrime) {
         if (firstNumber < 8) {
             return parseInt(exponentPrime.toString()).toString(2).padStart(10, "0").slice(0, 2) + packedBCD[firstNumber].slice(1);
@@ -37,6 +39,7 @@ $(document).ready(function() {
         }
     }
 
+    // fifteenNum is a numerical STRING
     function fifteenDPB (fifteenNum) {
         let returnString = "";
         returnString = returnString + threeDPB(fifteenNum.slice(0, 3));
@@ -47,8 +50,9 @@ $(document).ready(function() {
         return returnString;
     }
 
+    // threeNum is a numerical String
     function threeDPB (threeNum) {
-        let numString = threeNum.toString();
+        let numString = threeNum;
         let firstDigit = parseInt(numString.charAt(0));
         let secondDigit = parseInt(numString.charAt(1));
         let thirdDigit = parseInt(numString.charAt(2));
