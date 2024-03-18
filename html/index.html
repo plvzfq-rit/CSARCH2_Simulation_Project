@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSARCH2 Project</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="../js/javascript.js"></script>
+    </head>
+    <body>
+        <h1>Decimal-64 Converter</h1>
+
+        <h2>Read Number:</h2>
+        <h3 id="num">-</h3>
+
+        <h2>Number in Decimal-64 binary:</h2>
+        <h3 id="bin">-</h3>
+
+        <h2>Number in Decimal-64 hex:</h2>
+        <h3 id="hex">-</h3>
+
+        <label for="decimal_number">Input number here: </label>
+        <input type="number" id="decimal_number"/><br>
+
+        <label for="rounding">Type of rounding:</label>
+        <select id="rounding" name="rounding">
+            <option value="Gaussian Rounding">Gaussian Rounding</option>
+            <option value="Truncation">Truncation</option>
+            <option value="Floor">Floor</option>
+            <option value="Ceiling">Ceiling</option>
+            <option value="Arithmetic">Arithmetic Rounding</option>
+        </select>
+        <br>
+        <br>
+        <input type="button" value="Compute" id="compute"/>
+    </body>
+</html>
