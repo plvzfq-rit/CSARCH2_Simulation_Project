@@ -4,32 +4,46 @@
         <title>CSARCH2 Project</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
         <script src="../js/javascript.js"></script>
+        <link rel="stylesheet" type="text/css" href="../css/styles.css" />
     </head>
     <body>
-        <h1>Decimal-64 Converter</h1>
+        <div class="main-container">
+            <div class="title-div">
+                <h1>Decimal-64 Converter</h1>
+            </div>
+            <div class="content-container">    
+                <div class = conversion-container>
+                    <span class ="title"><span class = "label-title">Read Number: </span><span class= "value" id = "num">-</span></span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class ="title"><span class = "label-title">Number in Decimal-64 binary:</span><span class= "value" id = "bin">-</span></span>
+                    <br>
+                    <br>
+                    <br>
+                    <span class ="title"><span class = "label-title">Number in Decimal-64 hex: </span><span class= "value" id = "hex">-</span></span>
+                    <br>
+                    <br>
+                    <br>
+                </div>
 
-        <h2>Read Number:</h2>
-        <h3 id="num">-</h3>
-
-        <h2>Number in Decimal-64 binary:</h2>
-        <h3 id="bin">-</h3>
-
-        <h2>Number in Decimal-64 hex:</h2>
-        <h3 id="hex">-</h3>
-
-        <label for="decimal_number">Input number here: </label>
-        <input type="number" id="decimal_number"/><br>
-
-        <label for="rounding">Type of rounding:</label>
-        <select id="rounding" name="rounding">
-            <option value="Gaussian Rounding">Gaussian Rounding</option>
-            <option value="Truncation">Truncation</option>
-            <option value="Floor">Floor</option>
-            <option value="Ceiling">Ceiling</option>
-            <option value="Arithmetic">Arithmetic Rounding</option>
-        </select>
-        <br>
-        <br>
-        <input type="button" value="Compute" id="compute"/>
+                <label for="decimal_number">Input number here: </label>
+                <input type="number" id="decimal_number"><br>
+                <br>
+                <br>
+                <label for="rounding">Type of rounding:</label>
+                <select id="rounding" name="rounding">
+                    <option value="Gaussian Rounding">Gaussian Rounding</option>
+                    <option value="Truncation">Truncation</option>
+                    <option value="Floor">Floor</option>
+                    <option value="Ceiling">Ceiling</option>
+                    <option value="Arithmetic">Arithmetic Rounding</option>
+                </select>
+                <br>
+                <br>
+            </div>
+            <input type="button" value="Compute" id="compute"/>
+        </div>
+    </div>
     </body>
 </html>

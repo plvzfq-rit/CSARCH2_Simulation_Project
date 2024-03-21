@@ -1,0 +1,62 @@
+body{
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "consolas", sans-serif;
+}
+
+option{
+    font-family: "consolas", sans-serif;
+}
+
+select{
+    font-family: "consolas", sans-serif;
+}
+
+#decimal_number{
+    font-family: "consolas", sans-serif;
+    width: 70%;
+}
+
+#compute{
+    font-family: "consolas", sans-serif;
+    padding: 5px 10px 5px 10px;
+}
+
+#compute:hover{
+    cursor: pointer;
+}
+
+.main-container{
+    background-color: aliceblue;
+    border: 2px black solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 47%;
+    padding: 5px 5px 20px 5px;
+    margin-top: 50px;
+}
+
+.conversion-container {
+    align-items: center;
+}
+
+h2{
+    align-items: center;
+}
+
+.content-container{
+    width: 100%;
+    padding-left: 25px;
+}
+
+.label-title{
+    font-weight: 600;
+    
+}
+
+label{
+    font-weight: 600;
+}
