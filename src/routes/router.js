@@ -102,6 +102,7 @@ router.get("/compute", (req, res) => {
             let contiField = parseInt(exponentPrime.toString()).toString(2).padStart(10, "0").slice(2);
             let bin = "0b" + signBit + combiField + contiField + bcdMantissa;
             let hex = toHex(bin);
+            //console.log(signBit, combiField, contiField, bcdMantissa);
             // console.log(s);
             // console.log(bin);
             // console.log(hex);
