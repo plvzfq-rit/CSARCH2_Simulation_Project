@@ -9,10 +9,66 @@ $(document).ready(function() {
         // get value from input
         let input = document.getElementById("decimal_number").value;
 
+        //testing input:
+        //let input = "-9876543210123456e200";
+        
         // checks if is in proper numerical format (trust)
-        if (input.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e[0-9]+)?$/gm)) {
+        if (input.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e[-+]?[0-9]+)?$/gm)) {
             
             // insert code here
+
+            let convertedValue = "";        //holds the converted value
+            
+            // First: Check if positive or negative for sign bit
+                // Return: 0 or 1   
+            let signBit = getSignBit(input);
+
+            // Second: Apply rounding + Handling more than 16 digits & Decimals
+                // Return: + or - then 16 digits plus exponent adjusted
+
+                // Rounding Function here. Return the value to "input", or create a new var for it.
+
+            // Third: get the exponent from input.
+                // Return: the exponent
+            let exponent = getExponent(input);
+
+            // Third: use "getExponentPrime" with the exponent as the parameter
+                // Return: the value of the exponent after adding 398
+            let exponentPrime = getExponentPrime(exponent);
+
+            // Fourth: Use "getCombiField" with the first digit of the padded out input and exponentPrime
+                // Return: Five digits, binary       
+            let firstDigit = getFirstDigit(input);
+            let combiField = getCombiField(firstDigit, exponentPrime);
+
+            // Fifth: Convert exponent to binary, pad to 10 digits, and get the last 8
+                // Return: 8 digits   
+            let expoCont = getExpoCont(exponentPrime);
+
+            // Sixth: Use "fifteenDPB" and pass the rest of the digits of the padded parameter. This should be 15 digits
+                // Return: 50 digits, binary
+            let inputFifteen = (noMoreE(input)).slice(-15);
+            let coeffField = fifteenDPB(inputFifteen);
+
+            // Seventh: combine everything
+            convertedValue = signBit + " " + combiField + " " + expoCont + " " + coeffField; // contains converted value
+
+            // Eigth: hex it
+            let uneditedConvertedValue = signBit + combiField + expoCont + coeffField;
+            let decimalConvertedValue = parseInt(uneditedConvertedValue, 2);
+            let hexConvertedValue = (decimalConvertedValue.toString(16)).toUpperCase(); // contains hexadecimal-converted value
+            
+            // Testing
+
+            //console.log("Input:             ", input);
+            //console.log("convertedValue:    ", convertedValue);
+
+            //let checkerOutput = convertedValue.slice(-20);
+            //let midpoint = 10;
+            //let result = checkerOutput.slice(0, midpoint) + " " + checkerOutput.slice(midpoint);
+
+            //console.log("Last 20 bits:      ", result);
+            //console.log("Hex converted:     ", hexConvertedValue);
 
         }
 
@@ -89,5 +145,51 @@ $(document).ready(function() {
         } else if (aei === "111") {
             return "00"+d+"11"+h+"111"+m;
         }
+    }
+
+    // get the exponent; all values after 'e'
+    function getExponent(input) {
+        // Match the part after "e" using a regular expression
+        let checker = input.match(/e([-+]?\d+)/i); 
+        if (checker) {
+            let exponent = parseInt(checker[1]);
+            return exponent;
+        } else {
+            // Return 0 if no exponent is found, i.e. 10e0
+            return 0;
+        }
+    }
+
+    // get the sign bit based on first char of input
+    function getSignBit(input){
+        signBit = input.charAt(0);
+            if (signBit=="-"){
+                signBit = "1";
+            } else {
+                signBit = "0";
+            }
+        return signBit;
+    }
+
+    // get the first digit, taking + and - into account
+    function getFirstDigit(input) {
+        // Remove leading + or -
+        let trimmedInput = input.replace(/^(\+|-)/, '');
+        let firstDigit = trimmedInput[0];
+        return parseInt(firstDigit);
+    }
+
+    // get the last 8 digits of exponentPrime in binary
+    function getExpoCont(exponentPrime){
+        let ePrimeBinary = parseInt(exponentPrime.toString()).toString(2).padStart(10, "0");
+        let expoCont = ePrimeBinary.slice(-8);
+        return expoCont;
+    }
+
+    // gets input without the exponent to get the 15 digits
+    function noMoreE(input){
+        let trimmedString = input.split("e");
+        let noE = trimmedString[0]; // Get the part before "e"
+        return noE;
     }
 });
