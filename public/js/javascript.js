@@ -1,4 +1,7 @@
-let packedBCD = ["0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001"];
+const BigNumber = require('bignumber.js');
+const packedBCD = ["0000", "0001", "0010", "0011", "0100", "0101", "0110", "0111", "1000", "1001"];
+
+
 
 $(document).ready(function() {
     $("#compute").click(function(e) {
@@ -8,6 +11,9 @@ $(document).ready(function() {
         
         // get value from input
         let input = document.getElementById("decimal_number").value;
+        let bn = new BigNumber(input);
+        console.log(bn);
+
 
         // checks if is in proper numerical format (trust)
         if (input.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e[0-9]+)?$/gm)) {
