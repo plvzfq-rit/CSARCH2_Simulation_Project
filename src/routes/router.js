@@ -10,21 +10,21 @@ router.get("/", (req, res) => {
 router.get("/compute", (req, res) => {
     let num = req.query.num;
     let rounding = req.query.rounding;
-    if (num.match(/^-0+(\.0*)?(e[0-9]+)?$/)) {
+    if (num.match(/^-0+(\.0*)?(e(\+|-)?[0-9]+)?$/)) {
         let s = "0b10000" + "0".repeat(59);
         res.json({
             num: "-0",
             bin: s,
             hex: "0x8000000000000000"
         });
-    } else if (num.match(/^(\+)?0+(\.0*)?(e[0-9]+)?$/)) {
+    } else if (num.match(/^(\+)?0+(\.0*)?(e(\+|-)?[0-9]+)?$/)) {
         let s = "0b00000" + "0".repeat(59);
         res.json({
             num: "0",
             bin: s,
             hex: "0x0000000000000000"
         });
-    } else if (num.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e[0-9]+)?$/)) {
+    } else if (num.match(/^(\+|-)?[0-9]+(\.[0-9]*)?(e(\+|-)?[0-9]+)?$/)) {
         let d = new Decimal(num);
         let zero = new Decimal(0);
         let isNegative = false;
@@ -100,8 +100,9 @@ router.get("/compute", (req, res) => {
                 signBit = "1";
             }
             let contiField = parseInt(exponentPrime.toString()).toString(2).padStart(10, "0").slice(2);
-            let bin = "0b" + signBit + combiField + contiField + bcdMantissa;
+            let bin = signBit + combiField + contiField + bcdMantissa;
             let hex = toHex(bin);
+            bin = "0b" + bin;
             //console.log(signBit, combiField, contiField, bcdMantissa);
             // console.log(s);
             // console.log(bin);
