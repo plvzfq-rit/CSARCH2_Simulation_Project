@@ -1,4 +1,4 @@
-# CSARCH2_Simulation_Project
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/986d5639-fe80-4e2f-95ca-d717382f4610)# CSARCH2_Simulation_Project
 
 ## Introduction
 A Node.js web application that is used to convert decimal inputs to IEEE754-2008 binary format. Representations are shown in both binary and hexadecimal.
@@ -25,6 +25,8 @@ Input: 0
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/c5eaa820-2203-4ecb-8b96-436215430c7e)
 Input: e (NAN)
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/651b20d8-f093-459a-ab02-fca9decc4f12)
+Input: 10000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 (Infinity Exponent)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/f1db19ce-495e-4abe-802d-22609f3ba06d)
 
 
 <put screeshots here + label>
