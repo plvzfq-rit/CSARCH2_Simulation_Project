@@ -1,7 +1,7 @@
 {
   "name": "csarch2_simulation_project",
   "version": "1.0.0",
-  "description": "",
+  "description": "A Node.js web application that is used to convert decimal inputs to IEEE754-2008 binary format. Representations are shown in both binary and hexadecimal.\r Options to round (round to nearest evens, truncation, ceiling, floor, and arithmetic rounding) are provided for numbers with more than 16 digits.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
