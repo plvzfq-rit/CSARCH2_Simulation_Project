@@ -1,4 +1,4 @@
-![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/986d5639-fe80-4e2f-95ca-d717382f4610)# CSARCH2_Simulation_Project
+# CSARCH2_Simulation_Project
 
 ## Introduction
 A Node.js web application that is used to convert decimal inputs to IEEE754-2008 binary format. Representations are shown in both binary and hexadecimal.
