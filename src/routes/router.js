@@ -13,8 +13,7 @@ router.post ("/output", (req, res) => {
     let bin = decodeURIComponent(req.query.bin);
     let hex = req.query.hex;
     const content = `Read number: ${num}\nDecimal-64 in binary: ${bin}\nDecimal-64 in hex: ${hex}\n`;
-    console.log(__dirname);
-    fs.writeFile(__dirname+"/output.txt", content, { flag: 'a+' }, e => {
+    fs.writeFile(__dirname+"../../../output.txt", content, { flag: 'a+' }, e => {
         if (e) {
             console.log(e);
         }
