@@ -70,6 +70,11 @@ Input: 3.1415926535897955
 (Truncation)
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/6a815f59-cb7f-416e-a0b0-d6c2670289da)
 
+Input: 3.1415926535897955
+(Floor)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/6d2fd665-a490-46fe-808e-119e2c21a888)
+
+
 
 
 <put screeshots here + label>
