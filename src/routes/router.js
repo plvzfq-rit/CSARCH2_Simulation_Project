@@ -62,6 +62,9 @@ router.post("/compute", (req, res) => {
                 d = d.toSignificantDigits(16, Decimal.ROUND_FLOOR);
             }
             let s = d.toExponential();
+            if (isNegative) {
+                s = s.slice(1);
+            }
             let digits = s.charAt(0);
             if (s.indexOf(".") != -1) {
                 digits = digits + s.slice(s.indexOf(".") + 1, s.indexOf("e"));
@@ -101,6 +104,9 @@ router.post("/compute", (req, res) => {
             let bin = signBit + combiField + contiField + bcdMantissa;
             let hex = toHex(bin);
             bin = "0b" + bin;
+            if (isNegative) {
+                s = "-" + s;
+            }
             res.json({
                 num: s,
                 bin: bin,
