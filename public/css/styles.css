@@ -28,6 +28,15 @@ select{
     cursor: pointer;
 }
 
+#output{
+    font-family: "consolas", sans-serif;
+    padding: 5px 10px 5px 10px;
+}
+
+#output:hover{
+    cursor: pointer;
+}
+
 .main-container{
     background-color: aliceblue;
     border: 2px black solid;
@@ -49,7 +58,8 @@ h2{
 
 .content-container{
     width: 100%;
-    padding-left: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
 
 .label-title{
