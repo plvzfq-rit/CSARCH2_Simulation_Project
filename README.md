@@ -61,6 +61,10 @@ Input:
 (Neg Below Min Mag)
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/9df02497-190d-45df-bbea-19cf5a93497a)
 
+Rounding Cases: 
+Gaussian Rounding: 3.1415926535897955
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/fdf44f9f-903a-437a-816a-586488120cec)
+
 
 <put screeshots here + label>
 
