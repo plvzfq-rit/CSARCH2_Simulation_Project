@@ -13,7 +13,16 @@ then
 Following that, type in ```node index``` into the command line. The project would now be open on ```localhost:3001```.
 
 ## File outputs
-An option is provided for results to be saved in an external text file ```output.txt```; this would be located in the projetc folder. Previous saved results would not be overwritten.
+An option is provided for results to be saved in an external text file ```output.txt```; this would be located in the project folder. Previous saved results would not be overwritten.
+
+## Problems Encountered
+Problems were initially encountered with Javascript's limited ability to represent beyond numbers with a factor of 10^308. This led to the use of an external library ```decimal.js```, to aid in representing
+the numbers in memory. Use of Flask and Python was considered; however, the steep learning curve and negligible gains lead to the abandonment of the idea. Issues were also faced when trying to output values
+into a .txt file from the web application. Nevertheless, a module within node.js was found (```fs```); it aided in accomplishing the task.
+
+## Screenshots
+
+<put screeshots here + label>
 
 ## Acknowledgements
 This simulation project is made in partial fulfillment for the requirements of a degree in Computer Science.
