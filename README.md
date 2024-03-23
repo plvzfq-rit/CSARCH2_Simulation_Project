@@ -74,6 +74,14 @@ Input: 3.1415926535897955
 (Floor)
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/6d2fd665-a490-46fe-808e-119e2c21a888)
 
+Input: 3.1415926535897955
+(Ceiling)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/62ccd76c-251c-43a5-9dc5-2f48902b0e47)
+
+Input: 3.1415926535897955
+(Arithmetic Rounding)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/4b48794d-30cb-4177-a489-99d2f064de08)
+
 
 
 
