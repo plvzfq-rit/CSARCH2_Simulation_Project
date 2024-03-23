@@ -82,6 +82,22 @@ Input: 3.1415926535897955
 (Arithmetic Rounding)
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/4b48794d-30cb-4177-a489-99d2f064de08)
 
+Input: -3.1415926535897955
+(Gaussian Rounding)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/7ed40c7f-08b9-4874-ae8d-357ffe1231ac)
+
+Input: -3.1415926535897955
+(Truncation)
+
+Input: -3.1415926535897955
+(Floor)
+
+Input: -3.1415926535897955
+(Ceiling)
+
+Input: -3.1415926535897955
+(Arithmetic Rounding)
+
 
 
 
