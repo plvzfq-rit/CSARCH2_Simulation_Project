@@ -21,7 +21,8 @@ the numbers in memory. Use of Flask and Python was considered; however, the stee
 into a .txt file from the web application. Nevertheless, a module within node.js was found (```fs```); it aided in accomplishing the task.
 
 ## Screenshots
-
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/c5eaa820-2203-4ecb-8b96-436215430c7e)
+Input: 0
 <put screeshots here + label>
 
 ## Acknowledgements
