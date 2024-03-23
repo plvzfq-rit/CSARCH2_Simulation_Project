@@ -24,7 +24,8 @@ into a .txt file from the web application. Nevertheless, a module within node.js
 Input: 0
 ![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/c5eaa820-2203-4ecb-8b96-436215430c7e)
 Input: e (NAN)
-![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/b74a4d34-c49a-4933-88d5-73f06918dfd8)
+![image](https://github.com/plvzfq-rit/CSARCH2_Simulation_Project/assets/67249789/651b20d8-f093-459a-ab02-fca9decc4f12)
+
 
 <put screeshots here + label>
 
