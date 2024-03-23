@@ -12,6 +12,9 @@ then
 ```npm install express decimal.js --save```
 Following that, type in ```node index``` into the command line. The project would now be open on ```localhost:3001```.
 
+## File outputs
+An option is provided for results to be saved in an external text file ```output.txt```; this would be located in the projetc folder. Previous saved results would not be overwritten.
+
 ## Acknowledgements
 This simulation project is made in partial fulfillment for the requirements of a degree in Computer Science.
 Two open source projects were used to aid in making this application: ```decimal.js```, for representing large numbers that vanilla Javascript could not, and ```express``` for routing.
