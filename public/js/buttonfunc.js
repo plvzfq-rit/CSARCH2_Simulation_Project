@@ -14,7 +14,7 @@ compute.addEventListener("click", async (e) => {
             document.getElementById("hex").innerHTML = obj.hex;
             field.value = "";
     }
-    xhttp.open("GET", "/compute?num="+num+"&rounding="+rounding.charAt(0), true);
+    xhttp.open("POST", "/compute?num="+num+"&rounding="+rounding.charAt(0), true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send();
 });

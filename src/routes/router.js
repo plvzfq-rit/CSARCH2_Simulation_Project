@@ -7,9 +7,10 @@ router.get("/", (req, res) => {
     res.sendFile(__dirname + "\\" + 'index.html');
 });
 
-router.get("/compute", (req, res) => {
+router.post("/compute", (req, res) => {
     let num = req.query.num;
     let rounding = req.query.rounding;
+
     if (num.match(/^-0+(\.0*)?(e(\+|-)?[0-9]+)?$/)) {
         let s = "0b10000" + "0".repeat(59);
         res.json({
@@ -88,9 +89,6 @@ router.get("/compute", (req, res) => {
                     });
                 }
             }
-
-
-
             let firstDigit = parseInt(digitsCopy.charAt(0));
             let otherDigits = digitsCopy.slice(1);
             let combiField = getCombiField(firstDigit, exponentPrime);
@@ -103,10 +101,6 @@ router.get("/compute", (req, res) => {
             let bin = signBit + combiField + contiField + bcdMantissa;
             let hex = toHex(bin);
             bin = "0b" + bin;
-            //console.log(signBit, combiField, contiField, bcdMantissa);
-            // console.log(s);
-            // console.log(bin);
-            // console.log(hex);
             res.json({
                 num: s,
                 bin: bin,
