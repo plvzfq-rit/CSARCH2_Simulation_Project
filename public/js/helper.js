@@ -105,4 +105,5 @@ function toHex (bin) {
     return ret;
 }
 
+
 module.exports = {getCombiField, getExponentPrime, fifteenDPB, toHex}
